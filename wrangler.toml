@@ -1,0 +1,22 @@
+name = "toko-buket-backend"
+main = "src/index.ts"
+compatibility_date = "2026-09-25"
+compatibility_flags = ["nodejs_compat"]
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "toko-buket-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+preview_database_id = "local-toko-buket-db"
+
+# Observability
+[observability]
+enabled = true
+
+[observability.logs]
+enabled = true
+
+# Environment variables (non-secret)
+[vars]
+ADMIN_SESSION_TTL_HOURS = "24"

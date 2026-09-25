@@ -1,0 +1,16 @@
+{
+  "name": "toko-buket-backend",
+  "version": "1.0.0",
+  "description": "Backend API + Admin Dashboard for Toko Buket (Cloudflare Workers + D1 + Midtrans Core API)",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 execute toko-buket-db --local --file=./schema.sql",
+    "db:migrate:remote": "wrangler d1 execute toko-buket-db --remote --file=./schema.sql",
+    "db:create": "wrangler d1 create toko-buket-db"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
